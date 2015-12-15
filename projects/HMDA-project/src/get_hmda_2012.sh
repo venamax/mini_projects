@@ -1,6 +1,6 @@
 #!/bin/bash
-set -e
-set -x
+set -e #Exit immediately if a command exits with a non-zero status
+set -x #Print command traces before executing command.
 if [ ! -d data/ ]; then echo 'Error: data/ not found.'; exit 1; fi;
 if [ ! -d data/raw/hmda/ ]; then mkdir -p data/raw/hmda/; fi;
 if [ ! -e "data/raw/hmda/2012PMICLAR_-_National.zip" ]; then
