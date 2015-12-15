@@ -35,7 +35,7 @@ data/.make_hmda_db: data/.make_hmda_dl src/db_hmda/make_tables.sql dicts/agencie
 
 data/.make_hmda_dl: src/get_hmda_2012.sh
 	bash src/get_hmda_2012.sh
-	curl http://www2.census.gov/geo/gazetteer/2013_Gazetteer/2013_Gaz_tracts_national.zip | funzip > data/raw/2013_Gaz_tracts_national.tsv
+	curl http://www2.census.gov/geo/docs/maps-data/data/gazetteer/2013_Gazetteer/2013_Gaz_tracts_national.zip | funzip > data/raw/2013_Gaz_tracts_national.tsv
 	touch $@
 
 ### Cleanup...
